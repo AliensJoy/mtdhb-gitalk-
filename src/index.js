@@ -2,6 +2,7 @@ import React from 'react'
 import { render } from 'react-dom'
 import 'es6-promise/auto'
 import GitalkComponent from './gitalk'
+import './style/mtdhb.css'
 
 class Gitalk {
   constructor (options = {}) {

@@ -3486,6 +3486,8 @@ var _gitalk = __webpack_require__(93);
 
 var _gitalk2 = _interopRequireDefault(_gitalk);
 
+__webpack_require__(224);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Gitalk = function () {
@@ -6448,9 +6450,10 @@ var GitalkComponent = function (_Component) {
     key: 'getComments',
     value: function getComments(issue) {
       if (!issue) return;
+      return _getComments2.default.call(this, issue);
       // Get comments via v4 graphql api, login required and sorting feature is available
-      if (this.accessToken) return _getComments2.default.call(this, issue);
-      return this.getCommentsV3(issue);
+      // if (this.accessToken) return QLGetComments.call(this, issue)
+      // return this.getCommentsV3(issue)
     }
   }, {
     key: 'createComment',
@@ -13424,6 +13427,12 @@ module.exports = function (object, index, value) {
   else object[index] = value;
 };
 
+
+/***/ }),
+/* 224 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);
