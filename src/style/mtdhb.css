@@ -8,13 +8,12 @@
   margin-bottom: 1.25em;
 }
 
-.gt-counts {
-  font-size: 0;
+.gt-counts .gt-link {
+  border: 0 !important;
 }
 
-.gt-counts .gt-link {
-  font-size: 16px;
-  border: 0 !important;
+.gt-counts .gt-link:before {
+  content: '共 ';
 }
 
 .gt-counts .gt-link:after {
