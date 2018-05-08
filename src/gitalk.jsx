@@ -564,7 +564,7 @@ class GitalkComponent extends Component {
     const { user, comments, isLoadOver, isLoadMore, pagerDirection } = this.state
     const { language, flipMoveOptions, admin } = this.options
     const totalComments = comments.concat([])
-    if (pagerDirection === 'last' && this.accessToken) {
+    if (pagerDirection === 'last') {
       totalComments.reverse()
     }
     return (
