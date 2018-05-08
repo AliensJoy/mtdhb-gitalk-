@@ -245,7 +245,7 @@ class GitalkComponent extends Component {
             client_id: clientID,
             client_secret: clientSecret,
             per_page: perPage,
-            page
+            page: 9999999999,
           }
         }).then(res => {
           const { comments, issue } = this.state
@@ -584,7 +584,7 @@ class GitalkComponent extends Component {
           ))}
         </FlipMove>
         {!totalComments.length && <p className="gt-comments-null">{this.i18n.t('first-comment-person')}</p>}
-        {(!isLoadOver && totalComments.length) ? <div className="gt-comments-controls">
+        {(this.accessToken && !isLoadOver && totalComments.length) ? <div className="gt-comments-controls">
           <Button className="gt-btn-loadmore" onClick={this.handleCommentLoad} isLoading={isLoadMore} text={this.i18n.t('load-more')} />
         </div> : null}
       </div>

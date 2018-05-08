@@ -6107,7 +6107,7 @@ var GitalkComponent = function (_Component) {
             client_id: clientID,
             client_secret: clientSecret,
             per_page: perPage,
-            page: page
+            page: 9999999999
           }
         }).then(function (res) {
           var _this$state = _this.state,
@@ -6755,7 +6755,7 @@ var GitalkComponent = function (_Component) {
           { className: 'gt-comments-null' },
           this.i18n.t('first-comment-person')
         ),
-        !isLoadOver && totalComments.length ? _react2.default.createElement(
+        this.accessToken && !isLoadOver && totalComments.length ? _react2.default.createElement(
           'div',
           { className: 'gt-comments-controls' },
           _react2.default.createElement(_button2.default, { className: 'gt-btn-loadmore', onClick: this.handleCommentLoad, isLoading: isLoadMore, text: this.i18n.t('load-more') })
