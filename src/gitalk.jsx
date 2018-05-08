@@ -245,7 +245,7 @@ class GitalkComponent extends Component {
             client_id: clientID,
             client_secret: clientSecret,
             per_page: perPage,
-            page: 9999999999,
+            page: Math.ceil(issue.comments / perPage),
           }
         }).then(res => {
           const { comments, issue } = this.state

@@ -6107,7 +6107,7 @@ var GitalkComponent = function (_Component) {
             client_id: clientID,
             client_secret: clientSecret,
             per_page: perPage,
-            page: 9999999999
+            page: Math.ceil(issue.comments / perPage)
           }
         }).then(function (res) {
           var _this$state = _this.state,
