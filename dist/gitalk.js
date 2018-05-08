@@ -6115,7 +6115,7 @@ var GitalkComponent = function (_Component) {
               issue = _this$state.issue;
 
           var isLoadOver = false;
-          var cs = comments.concat(res.data);
+          var cs = comments.concat(res.data.reverse());
           if (cs.length >= issue.comments || res.data.length < perPage) {
             isLoadOver = true;
           }

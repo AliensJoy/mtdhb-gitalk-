@@ -250,7 +250,7 @@ class GitalkComponent extends Component {
         }).then(res => {
           const { comments, issue } = this.state
           let isLoadOver = false
-          const cs = comments.concat(res.data)
+          const cs = comments.concat(res.data.reverse())
           if (cs.length >= issue.comments || res.data.length < perPage) {
             isLoadOver = true
           }
