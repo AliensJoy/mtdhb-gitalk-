@@ -249,17 +249,30 @@ class GitalkComponent extends Component {
           }
         }).then(res => {
           const { comments, issue } = this.state
-          let isLoadOver = false
-          const cs = comments.concat(res.data.reverse())
-          if (cs.length >= issue.comments || res.data.length < perPage) {
-            isLoadOver = true
-          }
-          this.setState({
-            comments: cs,
-            isLoadOver,
-            page: page + 1
+          let cs = comments.concat(res.data.reverse())
+          return axiosGithub.get(issue.comments_url, {
+            headers: {
+              Accept: 'application/vnd.github.v3.full+json'
+            },
+            params: {
+              client_id: clientID,
+              client_secret: clientSecret,
+              per_page: perPage,
+              page: Math.ceil(issue.comments / perPage) - 1,
+            }
+          }).then(res => {
+            cs = cs.concat(res.data.reverse())
+            let isLoadOver = false
+            if (cs.length >= issue.comments || res.data.length < perPage) {
+              isLoadOver = true
+            }
+            this.setState({
+              comments: cs.slice(0, 10),
+              isLoadOver,
+              page: page + 1
+            })
+            return cs
           })
-          return cs
         })
       })
   }

@@ -720,7 +720,7 @@
 
 .gt-counts .gt-link {
   font-size: 16px;
-  border: 0;
+  border: 0 !important;
 }
 
 .gt-counts .gt-link:after {

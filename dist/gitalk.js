@@ -6114,17 +6114,30 @@ var GitalkComponent = function (_Component) {
               comments = _this$state.comments,
               issue = _this$state.issue;
 
-          var isLoadOver = false;
           var cs = comments.concat(res.data.reverse());
-          if (cs.length >= issue.comments || res.data.length < perPage) {
-            isLoadOver = true;
-          }
-          _this.setState({
-            comments: cs,
-            isLoadOver: isLoadOver,
-            page: page + 1
+          return _util.axiosGithub.get(issue.comments_url, {
+            headers: {
+              Accept: 'application/vnd.github.v3.full+json'
+            },
+            params: {
+              client_id: clientID,
+              client_secret: clientSecret,
+              per_page: perPage,
+              page: Math.ceil(issue.comments / perPage) - 1
+            }
+          }).then(function (res) {
+            cs = cs.concat(res.data.reverse());
+            var isLoadOver = false;
+            if (cs.length >= issue.comments || res.data.length < perPage) {
+              isLoadOver = true;
+            }
+            _this.setState({
+              comments: cs.slice(0, 10),
+              isLoadOver: isLoadOver,
+              page: page + 1
+            });
+            return cs;
           });
-          return cs;
         });
       });
     };
