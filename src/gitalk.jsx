@@ -265,10 +265,9 @@ class GitalkComponent extends Component {
   }
   getComments (issue) {
     if (!issue) return
-    return QLGetComments.call(this, issue)
     // Get comments via v4 graphql api, login required and sorting feature is available
-    // if (this.accessToken) return QLGetComments.call(this, issue)
-    // return this.getCommentsV3(issue)
+    if (this.accessToken) return QLGetComments.call(this, issue)
+    return this.getCommentsV3(issue)
   }
 
   createComment () {
@@ -565,7 +564,7 @@ class GitalkComponent extends Component {
     const { user, comments, isLoadOver, isLoadMore, pagerDirection } = this.state
     const { language, flipMoveOptions, admin } = this.options
     const totalComments = comments.concat([])
-    if (pagerDirection === 'last') {
+    if (pagerDirection === 'last' && this.accessToken) {
       totalComments.reverse()
     }
     return (
