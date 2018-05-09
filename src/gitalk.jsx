@@ -600,6 +600,7 @@ class GitalkComponent extends Component {
         {(this.accessToken && !isLoadOver && totalComments.length) ? <div className="gt-comments-controls">
           <Button className="gt-btn-loadmore" onClick={this.handleCommentLoad} isLoading={isLoadMore} text={this.i18n.t('load-more')} />
         </div> : null}
+        {!this.accessToken && <div className="gt-comments-controls">登录后可查看更多留言</div>}
       </div>
     )
   }

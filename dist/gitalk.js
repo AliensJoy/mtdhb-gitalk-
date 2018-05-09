@@ -6772,7 +6772,12 @@ var GitalkComponent = function (_Component) {
           'div',
           { className: 'gt-comments-controls' },
           _react2.default.createElement(_button2.default, { className: 'gt-btn-loadmore', onClick: this.handleCommentLoad, isLoading: isLoadMore, text: this.i18n.t('load-more') })
-        ) : null
+        ) : null,
+        !this.accessToken && _react2.default.createElement(
+          'div',
+          { className: 'gt-comments-controls' },
+          '\u767B\u5F55\u540E\u53EF\u67E5\u770B\u66F4\u591A\u7559\u8A00'
+        )
       );
     }
   }, {
@@ -11616,11 +11621,6 @@ exports.default = function (_ref) {
             className: 'gt-comment-username',
             href: comment.user && comment.user.html_url },
           comment.user && comment.user.login
-        ),
-        _react2.default.createElement(
-          'span',
-          { className: 'gt-comment-text' },
-          commentedText
         ),
         _react2.default.createElement(
           'span',

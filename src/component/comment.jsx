@@ -58,9 +58,9 @@ export default ({
             href={comment.user && comment.user.html_url}>
               {comment.user && comment.user.login}
           </a>
-          <span className="gt-comment-text">
-            {commentedText}
-          </span>
+          {/*<span className="gt-comment-text">*/}
+            {/*{commentedText}*/}
+          {/*</span>*/}
           <span className="gt-comment-date">
             {distanceInWordsToNow(comment.created_at, {
               addSuffix: true,
