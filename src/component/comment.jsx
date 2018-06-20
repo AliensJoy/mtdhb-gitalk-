@@ -89,7 +89,7 @@ export default ({
           }
         </div>
         <div className="gt-comment-body markdown-body" dangerouslySetInnerHTML={{
-          __html: comment.body_html
+          __html: comment.body_html.replace(/助手|平台|公众号/g, '***')
         }} />
       </div>
     </div>
