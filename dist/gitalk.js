@@ -10256,7 +10256,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;//     (c) 2012 
 /* 148 */
 /***/ (function(module, exports) {
 
-module.exports = {"init":"留言板加载中 ...","no-found-related":"未找到相关的 %{link} 进行评论","please-contact":"请联系 %{user} 初始化创建","init-issue":"初始化 Issue","leave-a-comment":"说点什么","comment":"留言","support-markdown":"支持 Markdown 语法","login-with-github":"使用 GitHub 登录","first-comment-person":"来做第一个留言的人吧！","commented":"发表于","load-more":"加载更多","counts":"%{counts} 条评论","sort-asc":"从旧到新排序","sort-desc":"从新到旧排序","logout":"注销","anonymous":"未登录用户"}
+module.exports = {"init":"留言板加载中 ...","no-found-related":"未找到相关的 %{link} 进行评论","please-contact":"请联系 %{user} 初始化创建","init-issue":"初始化 Issue","leave-a-comment":"请勿在此处发广告、对骂等信息，否则一律拉黑。提建议或者 BUG 请点击页面顶部的“反馈问题”，因为这里不方便讨论细节。","comment":"留言","support-markdown":"支持 Markdown 语法","login-with-github":"使用 GitHub 登录","first-comment-person":"来做第一个留言的人吧！","commented":"发表于","load-more":"加载更多","counts":"%{counts} 条评论","sort-asc":"从旧到新排序","sort-desc":"从新到旧排序","logout":"注销","anonymous":"未登录用户"}
 
 /***/ }),
 /* 149 */
@@ -11523,7 +11523,7 @@ exports.default = function (_ref) {
         )
       ),
       _react2.default.createElement('div', { className: 'gt-comment-body markdown-body', dangerouslySetInnerHTML: {
-          __html: comment.body_html.replace(/助手|平台|公众号|\d{5,}|出售|垃圾|支付宝|[微v威]信|WX|QQ|扫码|免费|加我/img, '***')
+          __html: comment.body_html.replace(/助手|平台|公众号|\d{5,}|出售|垃圾|支付宝|[微v威]信|WX|QQ|扫码|免费|加我|脑残|疯狗/img, '***')
         } })
     )
   );
