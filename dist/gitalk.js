@@ -11523,7 +11523,7 @@ exports.default = function (_ref) {
         )
       ),
       _react2.default.createElement('div', { className: 'gt-comment-body markdown-body', dangerouslySetInnerHTML: {
-          __html: ['WhiteBlackHacker', 'JantHsueh', 'SecutiryKail'].includes(comment.user && comment.user.login) ? '大家好，我是傻逼' : comment.body_html.replace(/助手|平台|公众号|出售|垃圾|支付宝|[微v威唯]信|WX|QQ|扫码|免费|加我|脑残|疯狗/img, '***')
+          __html: isAdmin ? comment.body_html : ['WhiteBlackHacker', 'JantHsueh', 'SecutiryKail'].includes(comment.user && comment.user.login) ? '大家好，我是傻逼' : comment.body_html.replace(/助手|平台|公众号|出售|垃圾|支付宝|[微v威唯]信|WX|QQ|扫码|免费|加我|脑残|疯狗/img, '***')
         } })
     )
   );
