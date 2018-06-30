@@ -512,10 +512,11 @@ class GitalkComponent extends Component {
   }
 
   initing () {
-    return <div className="gt-initing">
-      <i className="gt-loader"/>
-      <p className="gt-initing-text">{this.i18n.t('init')}</p>
-    </div>
+    return null
+    // return <div className="gt-initing">
+    //   <i className="gt-loader"/>
+    //   <p className="gt-initing-text">{this.i18n.t('init')}</p>
+    // </div>
   }
   noInit () {
     const { user, isIssueCreating } = this.state

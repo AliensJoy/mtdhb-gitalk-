@@ -6500,16 +6500,11 @@ var GitalkComponent = function (_Component) {
   }, {
     key: 'initing',
     value: function initing() {
-      return _react2.default.createElement(
-        'div',
-        { className: 'gt-initing' },
-        _react2.default.createElement('i', { className: 'gt-loader' }),
-        _react2.default.createElement(
-          'p',
-          { className: 'gt-initing-text' },
-          this.i18n.t('init')
-        )
-      );
+      return null;
+      // return <div className="gt-initing">
+      //   <i className="gt-loader"/>
+      //   <p className="gt-initing-text">{this.i18n.t('init')}</p>
+      // </div>
     }
   }, {
     key: 'noInit',
