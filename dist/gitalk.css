@@ -741,9 +741,10 @@
 }
 
 .gt-avatar {
-  background: #fff;
+  background-color: #ccc;
   overflow: hidden;
   border-radius: 3px;
+  background-repeat: no-repeat;
 }
 /* variables */
 /* functions & mixins */

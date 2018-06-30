@@ -3248,7 +3248,7 @@ exports.default = function (_ref) {
       className = _ref.className;
   return _react2.default.createElement("div", {
     className: "gt-avatar " + className,
-    style: { background: "url(" + src + ") no-repeat", backgroundSize: "cover" }
+    style: { backgroundImage: "url(" + src + ")", backgroundSize: "cover" }
   });
 };
 
