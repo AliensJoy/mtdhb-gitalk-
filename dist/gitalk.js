@@ -3246,11 +3246,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.default = function (_ref) {
   var src = _ref.src,
       className = _ref.className;
-  return _react2.default.createElement(
-    "div",
-    { className: "gt-avatar " + className },
-    _react2.default.createElement("img", { src: src, alt: "\u5934\u50CF" })
-  );
+  return _react2.default.createElement("div", {
+    className: "gt-avatar " + className,
+    style: { background: "url(" + src + ") no-repeat", backgroundSize: "cover" }
+  });
 };
 
 /***/ }),

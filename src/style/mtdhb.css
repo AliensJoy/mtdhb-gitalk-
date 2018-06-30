@@ -33,3 +33,9 @@
   border-radius: 2px;
   margin-right: 5px;
 }
+
+.gt-avatar {
+  background: #fff;
+  overflow: hidden;
+  border-radius: 3px;
+}
