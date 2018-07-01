@@ -6500,7 +6500,15 @@ var GitalkComponent = function (_Component) {
   }, {
     key: 'initing',
     value: function initing() {
-      return null;
+      return _react2.default.createElement(
+        'div',
+        { className: 'markdown-body' },
+        _react2.default.createElement(
+          'pre',
+          null,
+          '  __  __   _____   ____    _   _   ____ |  \\/  | |_   _| |  _ \\  | | | | | __ ) | |\\/| |   | |   | | | | | |_| | |  _ \\ | |  | |   | |   | |_| | |  _  | | |_) | |_|  |_|   |_|   |____/  |_| |_| |____/'
+        )
+      );
       // return <div className="gt-initing">
       //   <i className="gt-loader"/>
       //   <p className="gt-initing-text">{this.i18n.t('init')}</p>

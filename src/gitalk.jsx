@@ -512,7 +512,16 @@ class GitalkComponent extends Component {
   }
 
   initing () {
-    return null
+    return (
+      <div className="markdown-body">
+        <pre>  __  __   _____   ____    _   _   ____
+ |  \/  | |_   _| |  _ \  | | | | | __ )
+ | |\/| |   | |   | | | | | |_| | |  _ \
+ | |  | |   | |   | |_| | |  _  | | |_) |
+ |_|  |_|   |_|   |____/  |_| |_| |____/
+        </pre>
+      </div>
+    )
     // return <div className="gt-initing">
     //   <i className="gt-loader"/>
     //   <p className="gt-initing-text">{this.i18n.t('init')}</p>
