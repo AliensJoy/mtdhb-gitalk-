@@ -6506,7 +6506,6 @@ var GitalkComponent = function (_Component) {
         _react2.default.createElement(
           'pre',
           null,
-          '$',
           __webpack_require__(221)
         )
       );
@@ -13322,7 +13321,7 @@ module.exports = function (object, index, value) {
 /* 221 */
 /***/ (function(module, exports) {
 
-module.exports = "  __  __   _____   ____    _   _   ____\n |  \\/  | |_   _| |  _ \\  | | | | | __ )\n | |\\/| |   | |   | | | | | |_| | |  _ \\\n | |  | |   | |   | |_| | |  _  | | |_) |\n |_|  |_|   |_|   |____/  |_| |_| |____/\n"
+module.exports = "  __  __   _____   ____    _   _   ____\n |  \\/  | |_   _| |  _ \\  | | | | | __ )\n | |\\/| |   | |   | | | | | |_| | |  _ \\\n | |  | |   | |   | |_| | |  _  | | |_) |\n |_|  |_|   |_|   |____/  |_| |_| |____/\n\n           每天大红包 mtdhb.com\n"
 
 /***/ }),
 /* 222 */
