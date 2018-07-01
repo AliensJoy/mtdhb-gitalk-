@@ -53,6 +53,10 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.txt$/,
+        use: 'raw-loader'
+      },
+      {
         test: /\.jsx?$/,
         exclude: /node_modules/,
         use: 'babel-loader'

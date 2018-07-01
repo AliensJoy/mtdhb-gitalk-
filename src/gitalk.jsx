@@ -514,12 +514,7 @@ class GitalkComponent extends Component {
   initing () {
     return (
       <div className="markdown-body">
-        <pre>  __  __   _____   ____    _   _   ____
- |  \/  | |_   _| |  _ \  | | | | | __ )
- | |\/| |   | |   | | | | | |_| | |  _ \
- | |  | |   | |   | |_| | |  _  | | |_) |
- |_|  |_|   |_|   |____/  |_| |_| |____/
-        </pre>
+        <pre>${require('./mtdhb.txt')}</pre>
       </div>
     )
     // return <div className="gt-initing">

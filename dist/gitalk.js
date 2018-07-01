@@ -3314,7 +3314,7 @@ var _gitalk = __webpack_require__(90);
 
 var _gitalk2 = _interopRequireDefault(_gitalk);
 
-__webpack_require__(221);
+__webpack_require__(222);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -6506,7 +6506,8 @@ var GitalkComponent = function (_Component) {
         _react2.default.createElement(
           'pre',
           null,
-          '  __  __   _____   ____    _   _   ____ |  \\/  | |_   _| |  _ \\  | | | | | __ ) | |\\/| |   | |   | | | | | |_| | |  _ \\ | |  | |   | |   | |_| | |  _  | | |_) | |_|  |_|   |_|   |____/  |_| |_| |____/'
+          '$',
+          __webpack_require__(221)
         )
       );
       // return <div className="gt-initing">
@@ -13319,6 +13320,12 @@ module.exports = function (object, index, value) {
 
 /***/ }),
 /* 221 */
+/***/ (function(module, exports) {
+
+module.exports = "  __  __   _____   ____    _   _   ____\n |  \\/  | |_   _| |  _ \\  | | | | | __ )\n | |\\/| |   | |   | | | | | |_| | |  _ \\\n | |  | |   | |   | |_| | |  _  | | |_) |\n |_|  |_|   |_|   |____/  |_| |_| |____/\n"
+
+/***/ }),
+/* 222 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
